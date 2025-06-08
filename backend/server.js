@@ -21,11 +21,6 @@ const sampleProjects = [
   { id: 3, name: 'Project Gamma', description: 'Exploring new ideas with Project Gamma.' },
 ];
 
-// hallo vom backend
-app.get('/', (req, res) => {
-  res.send('hallo vom backend');
-});
-
 // GET route for /api/projects
 app.get('/api/projects', async (req, res) => {
   try {
