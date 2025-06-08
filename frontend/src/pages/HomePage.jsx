@@ -7,8 +7,8 @@ function HomePage() {
       <section className="bg-gray-100 dark:bg-gray-700 rounded-lg shadow-lg p-8 text-center my-8">
         <div className="flex flex-col items-center">
           <img
-            src="https://via.placeholder.com/600x300.png?text=Placeholder+Image"
-            alt="Placeholder Hero Image"
+            img src="/images/Ironman.jpg"
+            alt="Hero Image"
             className="rounded-lg mb-6 w-full max-w-2xl"
           />
           <h1 className="text-5xl font-bold text-gray-800 dark:text-white">
