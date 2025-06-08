@@ -1,9 +1,7 @@
-import tailwindcss from '@tailwindcss/postcss';
-import autoprefixer from 'autoprefixer';
-
-export default {
-  plugins: {
-    tailwindcss,
-    autoprefixer,
-  },
+// CommonJS (funktioniert in allen Build-Tools sicher)
+module.exports = {
+  plugins: [
+    require('tailwindcss'),
+    require('autoprefixer'),
+  ],
 };
