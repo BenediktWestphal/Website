@@ -6,7 +6,11 @@ require('dotenv').config();
 const app = express();
 
 // Enable CORS
-app.use(cors()); // Default CORS configuration allows all origins
+app.use(cors({
+  origin: 'https://myfrontend.up.railway.app',
+  methods: ['GET', 'POST'],
+}));
+ // Default CORS configuration allows all origins
 
 // Middleware to parse JSON bodies
 const port = process.env.PORT || 3001;
