@@ -4,7 +4,7 @@ const { pool, createProjectsTable, query } = require('./db');
 require('dotenv').config();
 
 const app = express();
-const frontendUrl = process.env.VITE_API_BASE_URL;
+const frontendUrl = process.env.FRONTEND_URL;
 
 app.use(cors({
   origin: frontendUrl,
