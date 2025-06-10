@@ -4,12 +4,14 @@ const { pool, createProjectsTable, query } = require('./db');
 require('dotenv').config();
 
 const app = express();
-const frontendUrl = process.env.FRONTEND_URL;
+const frontendUrl = process.env.VITE_API_BASE_URL;
 
 app.use(cors({
   origin: frontendUrl,
   methods: ['GET', 'POST'],
+  credentials: true,
 }));
+
  // Default CORS configuration allows all origins
 
 // Middleware to parse JSON bodies
@@ -52,7 +54,7 @@ const startServer = async () => {
     await createProjectsTable();
 
     app.listen(port, () => {
-      console.log(`Server listening at http://localhost:${port}`);
+      console.log(`Server listening on port ${port}`);
     });
   } catch (err) {
     console.error('Failed to connect to the database or start server:', err);
