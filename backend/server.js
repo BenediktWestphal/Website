@@ -47,10 +47,9 @@ app.get('/api/projects', async (req, res) => {
 // Start server and connect to database
 const startServer = async () => {
   try {
-    // Test the database connection
+    console.log("Connecting to DB...");
     await pool.connect();
-    console.log('Connected to PostgreSQL database.');
-    // Create projects table if it doesn't exist
+    console.log("Connected to PostgreSQL database.");
     await createProjectsTable();
 
     app.listen(port, () => {
@@ -58,8 +57,9 @@ const startServer = async () => {
     });
   } catch (err) {
     console.error('Failed to connect to the database or start server:', err);
-    process.exit(1); // Exit if DB connection fails
+    process.exit(1);
   }
 };
+
 
 startServer();
