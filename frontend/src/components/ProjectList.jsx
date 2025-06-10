@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 // Get the API base URL from environment variables
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001/api';
+const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || 'http://localhost:3001';
 
 function ProjectList() {
   const [projects, setProjects] = useState([]);
