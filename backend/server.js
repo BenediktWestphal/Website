@@ -4,10 +4,10 @@ const { pool, createProjectsTable, query } = require('./db');
 require('dotenv').config();
 
 const app = express();
+const frontendUrl = process.env.FRONTEND_URL;
 
-// Enable CORS
 app.use(cors({
-  origin: 'https://myfrontend.up.railway.app',
+  origin: frontendUrl,
   methods: ['GET', 'POST'],
 }));
  // Default CORS configuration allows all origins
