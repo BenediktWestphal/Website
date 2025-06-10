@@ -4,13 +4,8 @@ const { pool, createProjectsTable, query } = require('./db');
 require('dotenv').config();
 
 const app = express();
-const frontendUrl = process.env.FRONTEND_URL;
+app.use(cors());
 
-app.use(cors({
-  origin: frontendUrl,
-  methods: ['GET', 'POST'],
-  credentials: true,
-}));
 
  // Default CORS configuration allows all origins
 
